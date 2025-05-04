@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro-Eco Services - Produits Agricoles Bio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- En-tête avec diaporama -->
+  <header id="hero-section">
+    <img src="images/Logo/Logo.jpg" alt="Logo Agro-Eco" class="logo">
+    <h1>Agro-Eco Services</h1>
+    <h1>Market</h1>
+  </header>
+
+  <!-- Barre de navigation avec menu automatique au survol -->
+  <header class="navbar">
+    <div class="logo-nav">
+      <i class="fas fa-leaf menu-icon"></i>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="menu-navigation" style="display: none;">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="panierbio/panier-bio.html">Panier bio</a></li>
+        <li><a href="engrais-organique.html">Engrais organique</a></li>
+        <li><a href="bio-fertilisant.html">Bio fertilisant</a></li>
+        <li><a href="larves-mouches.html">Larves de mouches</a></li>
+        <li><a href="conférences/conference-zome.html">Conférence Zome</a></li>
+        <li><a href="contact.html">Parler à un conseiller</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menu boutons icons -->
+  <section class="menu-boutons">
+    <div class="menu-btn">
+      <span><i class="fas fa-volume-up"></i></span>
+      <small>Info</small>
+    </div>
+    <div class="menu-btn">
+      <span><i class="fas fa-tags"></i></span>
+      <small>Promo</small>
+    </div>
+    <div class="menu-btn">
+      <span><i class="fas fa-gift"></i></span>
+      <small>Bonus</small>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main>
+    <!-- Filtres -->
+    <section class="produits">
+      <h2>🌿 Nos Produits</h2>
+
+      <div class="filtre-categorie">
+        <button onclick="showAllCategories()" class="active">Tous</button>
+        <button onclick="showCategory('panier')">Paniers bio</button>
+        <button onclick="showCategory('engrais')">Engrais organiques</button>
+        <button onclick="showCategory('larves')">Larves de mouches</button>
+      </div>
+    </section>
+
+    <!-- Section Paniers Bio -->
+    <section class="produits category-section" id="panier-section">
+      <h2 class="category-title">🍎 Paniers Bio</h2>
+      
+      <div class="carousel-container">
+        <button class="carousel-arrow prev" onclick="moveCarousel('panier', -1)">❮</button>
+        
+        <div class="carousel-wrapper" id="panier-carousel">
+          <!-- Panier 1 -->
+          <div class="carousel-item active" data-product-name="Panier Bio 1">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="panierbio/images/images3.jpg" alt="Panier Bio 1">
+                <div class="overlay">
+                  <h3>Panier Bio 1</h3>
+                  <button class="btn-ajouter" data-id="1">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Panier 2 -->
+          <div class="carousel-item" data-product-name="Panier Bio 2">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="panierbio/images/images6.jpg" alt="Panier Bio 2">
+                <div class="overlay">
+                  <h3>Panier Bio 2</h3>
+                  <button class="btn-ajouter" data-id="2">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Panier 3 -->
+          <div class="carousel-item" data-product-name="Panier Bio 3">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="panierbio/images/images7.jpg" alt="Panier Bio 3">
+                <div class="overlay">
+                  <h3>Panier Bio 3</h3>
+                  <button class="btn-ajouter" data-id="3">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-arrow next" onclick="moveCarousel('panier', 1)">❯</button>
+      </div>
+      
+      <div class="carousel-dots" id="panier-dots">
+        <span class="dot active" onclick="jumpToSlide('panier', 0)"></span>
+        <span class="dot" onclick="jumpToSlide('panier', 1)"></span>
+        <span class="dot" onclick="jumpToSlide('panier', 2)"></span>
+      </div>
+    </section>
+
+    <!-- Section Engrais Organiques -->
+    <section class="produits category-section" id="engrais-section">
+      <h2 class="category-title">🌱 Engrais Organiques</h2>
+      
+      <div class="carousel-container">
+        <button class="carousel-arrow prev" onclick="moveCarousel('engrais', -1)">❮</button>
+        
+        <div class="carousel-wrapper" id="engrais-carousel">
+          <!-- Maggot-compost -->
+          <div class="carousel-item active" data-product-name="Maggot-compost">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="Engraisorganique/images/engrais1.jpg" alt="Maggot-compost">
+                <div class="overlay">
+                  <h3>Maggot-compost</h3>
+                  <button class="btn-ajouter" data-id="4">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Vermicompost -->
+          <div class="carousel-item" data-product-name="Vermicompost">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="Engraisorganique/images/engrais2.jpg" alt="Vermicompost">
+                <div class="overlay">
+                  <h3>Vermicompost</h3>
+                  <button class="btn-ajouter" data-id="5">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bokashi -->
+          <div class="carousel-item" data-product-name="Bokashi">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="Engraisorganique/images/engrais3.jpg" alt="Bokashi">
+                <div class="overlay">
+                  <h3>Bokashi</h3>
+                  <button class="btn-ajouter" data-id="6">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-arrow next" onclick="moveCarousel('engrais', 1)">❯</button>
+      </div>
+      
+      <div class="carousel-dots" id="engrais-dots">
+        <span class="dot active" onclick="jumpToSlide('engrais', 0)"></span>
+        <span class="dot" onclick="jumpToSlide('engrais', 1)"></span>
+        <span class="dot" onclick="jumpToSlide('engrais', 2)"></span>
+      </div>
+    </section>
+
+    <!-- Section Larves de Mouches -->
+    <section class="produits category-section" id="larves-section">
+      <h2 class="category-title">🐛 Larves de Mouches</h2>
+      
+      <div class="carousel-container">
+        <button class="carousel-arrow prev" onclick="moveCarousel('larves', -1)">❮</button>
+        
+        <div class="carousel-wrapper" id="larves-carousel">
+          <!-- Larves fraîches -->
+          <div class="carousel-item active" data-product-name="Larves de mouches fraîches">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="Images/Diasporama/images16.jpg" alt="Larves de mouches fraîches">
+                <div class="overlay">
+                  <h3>Larves de mouches fraîches</h3>
+                  <button class="btn-ajouter" data-id="7">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Larves séchées -->
+          <div class="carousel-item" data-product-name="Larves de mouches séchées">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="Images/Diasporama/images16.jpg" alt="Larves de mouches séchées">
+                <div class="overlay">
+                  <h3>Larves de mouches séchées</h3>
+                  <button class="btn-ajouter" data-id="8">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Œufs de BSF -->
+          <div class="carousel-item" data-product-name="Œufs de BSF">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="Images/Diasporama/images16.jpg" alt="Œufs de BSF">
+                <div class="overlay">
+                  <h3>Œufs de BSF</h3>
+                  <button class="btn-ajouter" data-id="9">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-arrow next" onclick="moveCarousel('larves', 1)">❯</button>
+      </div>
+      
+      <div class="carousel-dots" id="larves-dots">
+        <span class="dot active" onclick="jumpToSlide('larves', 0)"></span>
+        <span class="dot" onclick="jumpToSlide('larves', 1)"></span>
+        <span class="dot" onclick="jumpToSlide('larves', 2)"></span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bannière publicitaire -->
+  <section class="pub-banner">
+    <div class="pub-container">
+      <img src="Images/Diasporama/images9.jpg" alt="Publicité" id="pub-image">
+      <button class="close-pub" onclick="document.querySelector('.pub-banner').style.display='none';">×</button>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Agro-Eco Services</p>
+    <div class="bande-annonce">
+      <marquee behavior="scroll" direction="left">Promotion spéciale cette semaine sur les paniers bio et fertilisants naturels !</marquee>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+</body>
+</html>

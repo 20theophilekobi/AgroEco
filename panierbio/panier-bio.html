@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro-Eco Services - Paniers Bio</title>
+  <link rel="stylesheet" href="panier-bio.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- En-tête avec diaporama -->
+  <header id="hero-section">
+    <img src="../Images/Logo/Logo.jpg" alt="Logo Agro-Eco" class="logo">
+    <h1>Agro-Eco Services</h1>
+    <h1>Market</h1>
+  </header>
+
+  <!-- Barre de navigation avec menu automatique au survol -->
+  <header class="navbar">
+    <div class="logo-nav">
+      <i class="fas fa-leaf menu-icon"></i>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav id="menu-navigation" style="display: none;">
+      <ul>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="panier-bio.html" class="active">Panier bio</a></li>
+        <li><a href="engrais-organique.html">Engrais organique</a></li>
+        <li><a href="bio-fertilisant.html">Bio fertilisant</a></li>
+        <li><a href="larves-mouches.html">Larves de mouches</a></li>
+        <li><a href="conference-zome.html">Conférence Zome</a></li>
+        <li><a href="contact.html">Parler à un conseiller</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <!-- Section Paniers Bio -->
+    <section class="produits category-section">
+      <h2 class="category-title">🍎 Paniers Bio</h2>
+      <p class="category-description">
+        Nos paniers bio sont composés de fruits et légumes frais, cultivés localement sans pesticides ni engrais chimiques. 
+        Nous proposons différentes tailles de paniers pour répondre aux besoins de chaque famille.
+      </p>
+      
+      <div class="carousel-container">
+        <button class="carousel-arrow prev" onclick="moveCarousel('panier', -1)">❮</button>
+        
+        <div class="carousel-wrapper" id="panier-carousel">
+          <!-- Panier 1 -->
+          <div class="carousel-item active" data-product-name="Panier Bio 1">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="images/images4.jpg" alt="Panier Bio 1">
+                <div class="overlay">
+                  <h3>Panier Bio 1</h3>
+                  <p class="price">25.99 €</p>
+                  <p class="description">Assortiment de légumes bio de saison</p>
+                  <button class="btn-ajouter" data-id="1">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Panier 2 -->
+          <div class="carousel-item" data-product-name="Panier Bio 2">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="images/images6.jpg" alt="Panier Bio 2">
+                <div class="overlay">
+                  <h3>Panier Bio 2</h3>
+                  <p class="price">35.99 €</p>
+                  <p class="description">Fruits et légumes bio premium</p>
+                  <button class="btn-ajouter" data-id="2">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Panier 3 -->
+          <div class="carousel-item" data-product-name="Panier Bio 3">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="images/images3.jpg" alt="Panier Bio 3">
+                <div class="overlay">
+                  <h3>Panier Bio 3</h3>
+                  <p class="price">45.99 €</p>
+                  <p class="description">Assortiment complet de produits bio</p>
+                  <button class="btn-ajouter" data-id="3">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panier Personnel -->
+          <div class="carousel-item" data-product-name="Panier Personnel">
+            <div class="bulle-produit">
+              <div class="image-container">
+                <img src="images/images7.jpg" alt="Panier Personnel">
+                <div class="overlay">
+                  <h3>Panier Personnel</h3>
+                  <p class="price">Prix variable</p>
+                  <p class="description">Composez votre panier selon vos préférences</p>
+                  <button class="btn-ajouter" data-id="4">Commander</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-arrow next" onclick="moveCarousel('panier', 1)">❯</button>
+      </div>
+      
+      <div class="carousel-dots" id="panier-dots">
+        <span class="dot active" onclick="jumpToSlide('panier', 0)"></span>
+        <span class="dot" onclick="jumpToSlide('panier', 1)"></span>
+        <span class="dot" onclick="jumpToSlide('panier', 2)"></span>
+        <span class="dot" onclick="jumpToSlide('panier', 3)"></span>
+      </div>
+
+      <!-- Avantages des paniers bio -->
+      <section class="produits-avantages">
+        <h3>Pourquoi choisir nos paniers bio ?</h3>
+        <div class="avantages-grid">
+          <div class="avantage-item">
+            <i class="fas fa-leaf"></i>
+            <h4>100% Bio</h4>
+            <p>Tous nos produits sont certifiés biologiques</p>
+          </div>
+          <div class="avantage-item">
+            <i class="fas fa-home"></i>
+            <h4>Local</h4>
+            <p>Produits cultivés dans un rayon de 50km</p>
+          </div>
+          <div class="avantage-item">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Saisonnier</h4>
+            <p>Des produits frais de saison chaque semaine</p>
+          </div>
+          <div class="avantage-item">
+            <i class="fas fa-truck"></i>
+            <h4>Livraison</h4>
+            <p>Livraison à domicile ou points de collecte</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Bannière publicitaire -->
+  <section class="pub-banner">
+    <div class="pub-container">
+      <img src="images/images2.jpg" alt="Publicité" id="pub-image">
+      <button class="close-pub" onclick="document.querySelector('.pub-banner').style.display='none';">×</button>
+    </div>
+  </section>
+
+  <!-- Pied de page -->
+  <footer>
+    <p>&copy; 2025 Agro-Eco Services</p>
+    <div class="bande-annonce">
+      <marquee behavior="scroll" direction="left">Promotion spéciale cette semaine sur les paniers bio et fertilisants naturels !</marquee>
+    </div>
+  </footer>
+
+  <!-- Script JS -->
+  <script src="panier-bio.js"></script>
+</body>
+</html>
